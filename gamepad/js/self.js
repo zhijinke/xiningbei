@@ -1,0 +1,53 @@
+var vm = new Vue({
+	el:'#app',
+	data:{
+		id:666666666,
+		name:'Kanye',
+		birthday:'1900-6-6',
+		sex:'男',
+		oneshow:true,
+		twoshow:false,
+		threeshow:false,
+		fourshow:false,
+		tname:'',
+		tsex:'',
+		tdata:'',
+		time:'',
+		gamename:'素晴之日',
+		gamename2:'万花镜'
+	},
+	methods:{
+		one(){
+			this.oneshow=true
+			this.twoshow=false
+			this.threeshow=false
+			this.fourshow=false
+		},
+		two(){
+			this.oneshow=false
+			this.twoshow=true
+			this.threeshow=false
+			this.fourshow=false
+		},
+		three(){
+			this.oneshow=false
+			this.twoshow=false
+			this.threeshow=true
+			this.fourshow=false
+		},
+		four(){
+			this.oneshow=false
+			this.twoshow=false
+			this.threeshow=false
+			this.fourshow=true
+		},
+		save(){
+			if(this.tname && this.tdate && this.tsex){
+				this.name=this.tname
+				this.birthday=this.tdate
+				this.sex=this.tsex
+			}
+			
+		}
+	}
+})

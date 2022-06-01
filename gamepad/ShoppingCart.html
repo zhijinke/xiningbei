@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="./css/bs3gai.css">
+		<link rel="stylesheet" href="./css/bs4gai.css">
+		<link rel="stylesheet" type="text/css" href="css/gwc.css" />
+		<link rel="stylesheet" href="./css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" href="./css/rocket.css">
+		<script src="./js/jquery.min.js"></script>
+		<!-- <script src="./js/rocket.js"></script> -->
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="container-fluid">
+				<!-- 导航条 -->
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container">
+						<img class="navbar-left img" src="./images/logo.png" alt="">
+						<a href="index.php" class="navbar-text navbar-left">首页</a>
+						<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+						<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+						<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+						<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+						<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+						<div class="user">
+							<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+							<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+						</div>
+					</div>
+				</nav>
+				<!-- 内容开始 -->
+				<div class="row">
+					<div class="col-7 offset-1">
+						<div class="shopping_list_top" align="center">
+							您已选购以下商品
+						</div>
+						<div class="shopping_list_border">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tbody>
+									<tr class="shopping_list_title">
+										<td class="shopping_list_title_0">预览图</td>
+										<td class="shopping_list_title_1">商品名</td>
+										<td class="shopping_list_title_4">价格</td>
+										<td class="shopping_list_title_5">数量</td>
+										<td class="shopping_list_title_6">删除</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" id="jsTrolley">
+								<tbody>
+									<tr class="shopping_product_list" id="shoppingProduct_01" v-for="i in sp">
+										<td class="shopping_product_list_0"><img src="images/10.jpg" width="100px"
+												height="50px" /></td>
+										<td class="shopping_product_list_1"> <a href="#" class="blue">{{i.mc}}</a> </td>
+										<td class="shopping_product_list_4">{{i.concession}}</td>
+										<td class="shopping_product_list_5"><select>
+												<option>1</option>
+										</td>
+										<td class="shopping_product_list_6"> <a href="#" class="blue"
+												@click="RemoveRow($index)">删除</a> </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-3 " style="margin-top:40px; margin-left: 4%;">
+						<div class="card">
+							<div class="card-header  text-white" align="center">
+								小计
+							</div>
+							<div class="card-body">
+								<p style="color: limegreen;">免费国内配送标准&nbsp;&nbsp;<a href="#"
+										style="color: goldenrod;">详情</a></p>
+								<p>共（{{bum}}）件商品：￥{{totai}}</p>
+							</div>
+							<div class="card-footer" align="center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-outline-success"><a
+											href="order.html">去结算</a></button>
+									<button type="button" class="btn btn-outline-info">分享</button>
+									<button type="button" class="btn btn-outline-danger">取消订单</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top: 50px;">
+					<div class="col-12 ">
+						<div class="bc">
+							<div align="center" class="sc">
+								收藏夹
+							</div>
+						</div>
+					</div>
+					<div class="rounded">
+						<div class="product_storyList_content_right col-3">
+							<ul>
+								<li class="product_storyList_content_dash"> <a href="#" class="blue_14">lostCastle</a>
+								</li>
+								<li>游戏评分：<img src="images/star_red.gif" alt="star" /><img src="images/star_red.gif"
+										alt="star" /><img src="images/star_red.gif" alt="star" /><img
+										src="images/star_red.gif" alt="star" /><img src="images/star_red2.gif"
+										alt="star" /></li>
+								<li>发布商： <a href="#" class="blue_14">Hunter Studio </a> </li>
+								<li>平台： <a href="#" class="blue_14">PC端</a> </li>
+								<li>发行时间：2019年01月</li>
+								<li>Harwood曾经是被贵族统治的城堡，平凡的日子不幸迎来了终结，邪恶降临到了这片土地之上，曾经的主人贵族们被恶魔或奴役或杀害。渐渐地，恶魔们不满足于此，毗邻Harwood城堡的其他领地之民饱受侵扰。各地的勇者们开始踏入了Harwood城堡寻找邪恶的根源...
+								</li>
+
+							</ul>
+						</div>
+						<div class="product_storyList_content_right col-3">
+							<ul>
+								<li class="product_storyList_content_dash"> <a href="#" class="blue_14">devour</a> </li>
+								<li>游戏评分：<img src="images/star_red.gif" alt="star" /><img src="images/star_red.gif"
+										alt="star" /><img src="images/star_red.gif" alt="star" /><img
+										src="images/star_red.gif" alt="star" /><img src="images/star_red2.gif"
+										alt="star" /></li>
+								<li>发布商： <a href="#" class="blue_14">LXide</a> </li>
+								<li>平台： <a href="#" class="blue_14">PC端</a> </li>
+								<li>发行时间：2018年05月</li>
+								<li>DEVOUR是一款多人生存恐怖类游戏，支持1-4名玩家。阻止一名被邪魔附身的邪教领袖，否则你将被其拖入地狱。奔跑，尖叫以及躲藏。最为重要的是，千万不要被抓住，每一局DEVOUR的游戏体验都不尽相同，需要完美的执行力，团队配合，单局游戏至多持续1小时...
+								</li>
+
+							</ul>
+						</div>
+						<div class="product_storyList_content_right col-3">
+							<ul>
+								<li class="product_storyList_content_dash"> <a href="#" class="blue_14">灵魂筹码</a> </li>
+								<li>游戏评分：<img src="images/star_red.gif" alt="star" /><img src="images/star_red.gif"
+										alt="star" /><img src="images/star_red.gif" alt="star" /><img
+										src="images/star_red.gif" alt="star" /><img src="images/star_red2.gif"
+										alt="star" /></li>
+								<li>发布商： <a href="#" class="blue_14">重明工作室</a> </li>
+								<li>平台： <a href="#" class="blue_14">PC端</a> </li>
+								<li>发行时间：2017年11月</li>
+								<li>《灵魂筹码》是一款以东方风格（民国风）的非对称对抗恐怖游戏。在游戏里，你可以选择扮演因强烈的怨念死而复生的恶灵，利用强大的力量去追杀赌徒们，折磨并杀死他们来获得胜利；或是选择扮演弱小赌徒中的一员，想方设法的去封印恶灵，逃离这场灵魂的赌局...
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<footer>
+				<div class="footcontainer">
+					<div class="list1 list">
+						<ul>
+							<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+							<li><a href="#">联系客服</a></li>
+							<li><a href="#">廉政举报</a></li>
+							<li><a href="#">规则意见征集</a></li>
+							<li><a href="#">商务合作</a></li>
+						</ul>
+					</div>
+					<div class="list2 list">
+						<ul>
+							<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+							<li><a href="#">付款方式</a></li>
+							<li><a href="#">关于退款</a></li>
+							<li><a href="#">购买指南</a></li>
+							<li><a href="#">帮助中心</a></li>
+						</ul>
+					</div>
+					<div class="list3 list">
+						<ul>
+							<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+							<li><a href="#">服务协议</a></li>
+							<li><a href="#">隐私协议</a></li>
+							<li><a href="#">知识产权</a></li>
+						</ul>
+					</div>
+					<div class="list4 list">
+						<ul>
+							<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+							<li><a href="#">微信公众号</a></li>
+							<li><img src="./images/QRcode.png" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footfooter">
+					<span>&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1</span>
+				</div>
+			</footer>
+			<!-- 回到顶部 -->
+			<i class="iconfont icon-Top rocket"></i>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					sp: [{
+							mc: '永劫无间',
+							//价格
+							concession: 198
+						},
+						{
+							mc: '梦幻西游',
+							concession: 129
+						},
+						{
+							mc: '穿越火线',
+							concession: 49
+						},
+						{
+							mc: '地下城与勇士',
+							concession: 68
+						},
+						{
+							mc: '原神',
+							concession: 648
+						},
+						{
+							mc: '英雄联盟',
+							concession: 999
+						}
+					],
+					book: {
+						mc: '',
+						concession: 0
+					}
+				},
+				computed: {
+					totai() {
+						var sub = 0;
+						for (i in this.sp) {
+							sub += this.sp[i].concession
+						}
+						return sub
+					},
+					bum() {
+						return this.sp.length
+					}
+
+				},
+				methods: {
+					RemoveRow(index) {
+						this.sp.splice(index, 1)
+					}
+				}
+			})
+		</script>
+	</body>
+	<script src="./js/rocket.js"></script>
+</html>

@@ -1,0 +1,118 @@
+/* 导航条 */
+
+.navbar .container .img {
+	width: 50px;
+	line-height: 50px;
+}
+
+h1.title {
+	font-size: 0!important;
+	line-height: 0!important;
+	margin-bottom: 0!important;
+}
+
+.trend .index-h2 {
+	font-size: calc(1rem + 1vw);
+	text-align: center;
+	letter-spacing: 1px;
+	color: black;
+	margin-bottom: 10px;
+}
+
+#imagesStyle img {
+	width: 700px;
+	height: 600px;
+}
+
+#imagesStyleTwo {
+	position: fixed;
+	top: 10;
+	left: 100;
+	z-index: 1;	
+}
+
+#imagesStyleTwo img {
+	position: relative;
+	width:400px;
+	height:250px;
+	filter:contrast(75%);
+	
+}
+
+
+/*正文与图片*/
+
+.cardNew {
+	width: 700px;
+	height: 1600px;
+	border: 2px solid white;
+	margin-top: 10px;
+	padding-left: 10px;
+	position: relative;
+	border-radius: 5px;
+}
+
+.card-body  .card-img-first {
+	width: 640px;
+	height: 400px;
+	padding-left: 30px;
+}
+
+.card-body  .card-text {
+	text-indent: 50px;
+	letter-spacing: 3px;
+	word-wrap: break-word;
+	margin-top: 20px;
+}
+.card-title {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+
+
+/*<!--发表评论-->*/
+
+.form-inline .imagesCs {
+	margin-right: 10px;
+	border-radius: 50%;
+	transform: translateX(10px);
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.publishComment {
+	margin-top: 20px;
+}
+
+.publishComment .textareaCs {
+	width: 60%;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.textareaCs~button {
+	margin-bottom: 40px;
+}
+
+
+/*<!--全部评论-->*/
+ul textarea {
+	width: 60%;
+	height: 60px;
+}
+ul li img {
+	margin-right: 20px;
+	border-radius: 50%;
+	position: relative;
+	height: 60px;
+	left: 10px;
+}
+

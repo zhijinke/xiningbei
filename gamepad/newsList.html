@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>新闻列表</title>
+		<!--<meta name="viewport" content="width=device-width" initial-scale="1.0"/>-->
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap4.min.css" /> -->
+		<link rel="stylesheet" href="./css/bs3gai.css">
+		<link rel="stylesheet" href="./css/bs4gai.css">
+		<link rel="stylesheet" type="text/css" href="css/newsList.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/indexOrder.css"/>
+		<link rel="stylesheet" href="./css/iconfont.css">
+		
+	</head>
+
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+
+		<!--新闻列表-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<!--标题-->
+					<h3>新闻列表</h3>
+					<hr/>
+					<!--图片加文字-->
+					<!--第一个-->
+					<?php foreach($newslist as $k):?>
+					<div class="media">
+						<div class="media-left">
+							<a href="news.html"><img src="<?=$k['imgsrc']?>" class="media-object imgCs"></a>
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading h4Cs"><a href="news.html"><?=$k['title']?></a></h4>
+							<p class="media-heading" style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;"><?=$k['con']?></p>
+							<p class="media-time" style="position: relative;left:550px;bottom:100px;">
+								<?=$k['time']?>
+							</p>
+						</div>
+					</div>
+					<hr/>
+					<?php endforeach;?>
+					<!--分页-->
+					<div align="center">
+						<ul class="pagination">
+							<li>
+								<a href="newList.html">&laquo;</a>
+							</li>
+							<li class="active">
+								<a href="neswList.html">1</a>
+							</li>
+							<li>
+								<a href="newsList.html">2</a>
+							</li>
+							<li>
+								<a href="newsList.html">3</a>
+							</li>
+							<li>
+								<a href="newsList.html">4</a>
+							</li>
+							<li>
+								<a href="newsList.html">5</a>
+							</li>
+							<li>
+								<a href="newsList.html">&raquo;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<!---->
+					<!--标题-->
+					<h3>热点新闻排行</h3>
+					<hr/>
+					<div>
+						<ul class="newsList">
+							<?php foreach($news as $k):?>
+							<li>
+								<a class="btn-danger badge" href="news.html"><?=$k['id']?></a>
+								<span><a href="news.html"><?=$k['title']?></a></span>
+								<span class="listTime"><?=$k['time']?></span>
+							</li>
+							<?php endforeach;?>
+						</ul>
+					</div>
+					<!--新闻动态-->
+					<h3>新闻动态</h3>
+					<hr/>
+
+					<!-- 轮播图片 -->
+					<!-- 轮播 -->
+					<!-- 轮播 -->
+					<div class=" .container-fluid mb-4">
+						<div class="carousel slide carousel-fade w-100" data-ride="carousel" id="carousel" data-interval="3000">
+							<!-- 轮播指示器 -->
+							<!--<ol class="carousel-indicators">
+								<li data-target="#carousel" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel" data-slide-to="1"></li>
+								<li data-target="#carousel" data-slide-to="2"></li>
+								<li data-target="#carousel" data-slide-to="3"></li>
+							</ol>-->
+							<!-- 轮播图片 -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="images/对话框图片/10.jpg" style="width:300px;">
+								</div>
+								<div class="carousel-item">
+									<img src="images/对话框图片/5.jpg" style="width:300px;">
+								</div>
+								<div class="carousel-item">
+									<img src="images/对话框图片/10.jpg" style="width:300px;">
+								</div>
+								<div class="carousel-item">
+									<img src="images/对话框图片/5.jpg" style="width:300px;">
+								</div>
+
+								<!-- 轮播箭头 -->
+								<!--<a href="#carousel" class="carousel-control-prev" data-slide="prev">
+									<span class="carousel-control-prev-icon"></span>
+								</a>
+								<a href="#carousel" class="carousel-control-next" data-slide="next">
+									<span class="carousel-control-next-icon"></span>
+								</a>-->
+							</div>
+						</div>
+					</div>
+
+					<h3>焦点新闻</h3>
+					<hr/>
+					<ul class="list-group">
+						<div class="all">
+							<li>
+								<span>
+								<a href="news.html"><img src="images/web_himanatsu.jpg" style="width:300px;"/></a>
+							</span>
+							</li>
+							<a href="news.html"><li class="list-group-item">对焦点新闻的描述</li></a>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- 版权信息 -------------------------------->
+		<footer>
+					<div class="footcontainer">
+						<div class="list1 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+								<li><a href="#">联系客服</a></li>
+								<li><a href="#">廉政举报</a></li>
+								<li><a href="#">规则意见征集</a></li>
+								<li><a href="#">商务合作</a></li>
+							</ul>
+						</div>
+						<div class="list2 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+								<li><a href="#">付款方式</a></li>
+								<li><a href="#">关于退款</a></li>
+								<li><a href="#">购买指南</a></li>
+								<li><a href="#">帮助中心</a></li>
+							</ul>
+						</div>
+						<div class="list3 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+								<li><a href="#">服务协议</a></li>
+								<li><a href="#">隐私协议</a></li>
+								<li><a href="#">知识产权</a></li>
+							</ul>
+						</div>
+						<div class="list4 list">
+							<ul>
+								<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+								<li><a href="#">微信公众号</a></li>
+								<li><img src="./images/QRcode.png" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footfooter">
+						<span>软件二班游戏项目商城xxxxxxxxxxxxxxxxxxxxxx</span>
+					</div>
+				</footer>
+	</body>
+
+</html>

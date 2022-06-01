@@ -1,0 +1,230 @@
+body{
+	background-color: white;
+	z-index: 999;
+	
+}
+.big-box{
+	margin-left: 70px;
+	width: 100%;
+	height: 770px;
+	
+}
+.content{
+	width: 100%;
+	height: 90%;
+	margin: 0 auto;
+	margin-top: 40px;
+	font-family: '幼圆';
+}
+/* .tab-right{
+	width: 375px;
+	height: 400px;
+	border: 1px solid red;
+	position: absolute;
+	right: 200px;
+	top: 73px;
+}
+.comment{
+	width: 375px;
+	height: 200px;
+	border: 1px solid red;
+	position: absolute;
+	right: 200px;
+	top: 550px;
+} */
+.active{
+	  background-color: black!important;
+	  color: white!important;
+}
+.ml{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+.myimg{
+	position: absolute;
+	right: 700px;
+	top: 250px;
+}
+.myimg>img{
+	width: 300px;
+	height: 300px;
+	border-radius: 15px;
+}
+.left{
+	width: 25%;
+	float: left;
+	height: 100%;
+	font-size: 20px;
+	/* border-radius: 15px 0 0px 15px; */
+	box-shadow: -1px 7px 5px #666;
+	/* border: 1px solid royalblue; */
+	font-weight: bold;
+	font-family: '宋体';
+	border: 4px solid black;
+	position: relative;
+	background-color: rgb(250 250 250);
+	margin-left: 50px;
+}
+	.self_img>img{
+		width: 100%;
+		height: 100px;
+	}
+.content>.left>div{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	/* box-shadow: 1px 2px 2px #666; */
+	color: #000000;
+	border-bottom: 1px solid white;
+	
+	line-height: 40px;
+}
+
+
+.left>div>a{
+	text-decoration: none;
+}
+.left>div:hover{
+	/* color: violet;
+	background-color: #00FFFF; */
+	cursor: pointer;
+}
+.active{
+	background-color: white;
+}
+.right{
+		height: 100%;
+		width: 60%;
+		float: left;
+		background-color: white;
+		border-radius: 0 15px 15px 0;
+		box-shadow:  1px 3px 5px #666;
+		font-family: "arial black";
+		color: #000000;
+		border: 4px solid black;
+		border-left: 0;
+	}
+	.mt{
+		margin-top: 15px;
+	}
+.onebox>div{
+	margin-left: 10px;
+	font-size: 15px;
+}
+.threebox>div{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+}.threebox>div>div>button{
+	width: 80px;
+	margin-top: 15px;
+	margin-left: 40px;
+}
+.curs{
+	cursor: pointer;
+}
+.big-font{
+	font-size: 20px;
+	margin-top: 15px;
+	
+}
+.gameimg-box{
+	margin-top: 30px;
+	width: 200px;
+	height: 200px;
+	margin-bottom: 58PX;
+}
+.gameimg-box>img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	margin-top: 50PX;
+	margin-bottom: 20PX;
+}
+.gameimg-box:nth-child(2)>img{
+	margin-top: 30PX!important;
+}
+.comment-box-father{
+	position: relative;
+}	
+.comment-box{
+	position: absolute;
+	left: 250px;
+	top: -12PX;
+	width: 20rem;
+}
+.comment-box:nth-child(2){
+	left: 250PX;
+	top: 250PX;
+}
+.comment-box>div:nth-child(2){
+	margin-top: 5px;
+	width: 500px;
+}	
+
+.gameimg-box:nth-child(2){
+	position: absolute;
+	top: 50PX;
+}
+	
+.comment-box>div:nth-child(3){
+	margin-top: 15px;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	color:black;
+	width: 500px;
+	height: 150PX;
+	
+}
+
+
+.onebox>div{
+	width: 90%;
+	margin: 0 auto;
+	}
+	.twobox>div{
+	
+		width: 100%;
+		height: 234px;
+		
+	}
+	.twobox>div>div{
+		margin-left: 35px;
+		margin-top: 10px;
+		}
+	.twobox{
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.gobuy{
+		position: absolute;
+		bottom: 0;
+		font-size: 20px;
+		
+		background-color: #000000;
+	}
+	.gobuy>a{
+		color: white;
+	}
+	.gobuy>a:hover{
+		
+	}
+	.game-photo{
+		width: 230px;
+		float: left;
+		
+	}
+.game-photo>img{
+	margin-left: 15px;
+	margin-top: 15px;
+	height: 150px;
+	width: 200px;
+	border-radius: 15px;
+}
+.game-photo+div{
+	padding: 35px;
+}

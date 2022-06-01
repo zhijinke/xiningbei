@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>后台</title>
+		<link rel="stylesheet" href="./css/style.css">
+		<script src="./js/ckeditor/ckeditor.js"></script>
+	</head>
+
+	<body>
+		<div class="wrap wrap-article-edit">
+			<h1>新闻</h1>
+			<div class="tips">
+				<?=isset($tip)?$tip:''?>
+			</div>
+			<div class="box">
+				<div class="box-title">添加/编辑</div>
+				<div class="box-body">
+					<form method="post" action="?a=1&id=<?=isset($id)?$id:''?>">
+						<table>
+							<tr>
+								<th width="80">标题：</th>
+								<td><input type="text" name="title" value="<?=isset($news['title'])?$news['title']:''?>"></td>
+							</tr>
+							<tr>
+								<th width="80">发布时间：</th>
+								<td><input type="date" name="time" value="<?=isset($news['time'])?$news['time']:''?>"></td>
+							</tr>
+							<tr>
+								<th width="80">图片路径：</th>
+								<td><input type="text" name="imgsrc" value="<?=isset($news['imgsrc'])?$news['imgsrc']:''?>"></td>
+							</tr>
+							<tr class="s-description">
+								<th>内容：</th>
+								<td><textarea name="con" style="resize: vertical;"><?=isset($news['con'])?$news['con']:''?></textarea><span>（内容提要请在 2000 个字以内）</span></td>
+							</tr>
+							<tr class="s-act">
+								<th></th>
+								<td><input type="submit" value="保存"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./js/article.config.js"></script>
+		<script>
+			CKEDITOR.config.height = 400;
+			CKEDITOR.config.width = "100%";
+			CKEDITOR.replace("content");
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>后台</title>
+		<link rel="stylesheet" href="./css/style1.css">
+		<script src="./js/ckeditor/ckeditor.js"></script>
+	</head>
+	<body>
+		<div class="wrap wrap-article-edit">
+			<h1>游戏列表</h1>
+			<div class="tips"><?=isset($tip)?$tip:''?></div>
+			<div class="box">
+				<div class="box-title">添加/编辑</div>
+				<div class="box-body">
+					<form method="post" action="?a=1&id=<?=isset($id)?$id:''?>">
+						<table>
+							<tr><th width="80">游戏名：</th><td><input type="text" name="name" value="<?=isset($game['name'])?$game['name']:''?>"></td></tr>
+<tr><th width="80">游戏价格：</th><td><input type="number" name="price" value="<?=isset($game['price'])?$game['price']:''?>"></td></tr>
+<tr><th width="80">图片路径：</th><td><input type="text" name="imgsrc" value="<?=isset($game['imgsrc'])?$game['imgsrc']:''?>"></td></tr>
+							<tr class="s-editor">
+								<th>支持语言：</th>
+								<td>
+									<input type="checkbox" name="language[]" value="中文" <?=isset($game[ 'language'])&&(strpos($game[ 'language'], '中文')!==false)? 'checked': ''?>/>中文
+									<input type="checkbox" name="language[]" value="英文" <?=isset($game[ 'language'])&&(strpos($game[ 'language'], '英文')!==false)? 'checked': ''?>/>英文
+									<input type="checkbox" name="language[]" value="日语" <?=isset($game[ 'language'])&&(strpos($game[ 'language'], '日语')!==false)? 'checked': ''?>/>日语
+									<input type="checkbox" name="language[]" value="韩语" <?=isset($game[ 'language'])&&(strpos($game[ 'language'], '韩语')!==false)? 'checked': ''?>/>韩语
+							</tr>
+							<tr class="s-editor">
+								<th>游戏状态：</th>
+								<td><input type="radio" name="sale" value="已发售" <?=isset($game['sale'])&&$game['sale']=='已发售'?'checked':''?> />已发售
+									<input type="radio" name="sale" value="预约中" <?=isset($game['sale'])&&$game['sale']=='预约中'?'checked':''?>/>预约中</td>
+							</tr>
+							<tr class="s-description">
+								<th>介绍：</th>
+								<td><textarea name="introduce" style="resize: vertical;" ><?=isset($game['introduce'])?$game['introduce']:''?></textarea><span>（内容提要请在 500 个字以内）</span></td>
+							</tr>
+							<tr class="s-act">
+								<th></th>
+								<td><input type="submit" value="保存"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script src="./js/article.config.js"></script>
+		<script>
+			CKEDITOR.config.height = 400;
+			CKEDITOR.config.width = "100%";
+			CKEDITOR.replace("content");
+		</script>
+	</body>
+</html>

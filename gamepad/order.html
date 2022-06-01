@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/gwc.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" href="css/indexOrder.css">
+		<link rel="stylesheet" href="css/font.css">
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+
+
+			<div class="container-fluid">
+				<!-- 导航条 -------------------------------------------->
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container">
+						<img class="navbar-left img" src="./images/logo.png" alt="">
+						<a href="index.php" class="navbar-text navbar-left">首页</a>
+						<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+						<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+						<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+						<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+						<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+						<div class="user">
+							<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+							<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+						</div>
+					</div>
+				</nav>
+				<!-- 订单开始 -->
+				<div id="c">
+					
+				
+				<div class="box">
+					<div class="b1">
+						<div class="left">
+							<i class="iconfont icon-location"></i>
+						</div>
+						<div class="zhong">
+							<div class="top">
+								<h3>某某人</h3>
+								<span>1517xxxx1441</span>
+							</div>
+							<div class="bottom">xx市 xx区 xxx镇 xx小区x栋x楼xx室
+							</div>
+						</div>
+						<div class="right">
+							<i>></i>
+						</div>
+					</div>
+					<!-- 主体 -->
+					<div class="goods">
+						<div class="zuo">
+							<img src="./images/1.png" alt="">
+						</div>
+						<div class="zhong">
+							<div class="top">
+								<h3>永劫无间</h3>
+								<span>领券立减30元 豪华版打包...</span>
+							</div>
+							<div class="wzzhong">规格： 中文</div>
+							<div class="xia">
+								<em>¥<span>198</span></em>
+								<del> <i>¥<span>299</span></i></del>
+							</div>
+						</div>
+						<div class="you">
+
+							<span>x1</span>
+						</div>
+					</div>
+					<!-- 配送 -->
+					<div class="ps">
+						<div>
+							<span>配送方式</span>
+							<span id="a">极兔快递></span>
+						</div>
+						<div>
+							<i>买家备注</i>
+							<i>希望可以尽快发货，谢谢~</i>
+						</div>
+						<div>
+							<em>支付方式</em>
+							<em id="b">微信<span>></span></em>
+						</div>
+					</div>
+				</div>
+				</div>
+				<!-- 支付 -->
+				<div class="dibu">
+					<div class="zuo">
+						合计<span>￥198.00</span>
+					</div>
+					<div class="you"><a href="" style="color: white;">去支付</a></div>
+				</div>
+			</div>
+		</div>
+		<div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var xx = document.getElementById('a');
+		var flag = false;
+		xx.addEventListener('click', function() {
+			if (flag) {
+				
+				this.innerHTML = "极兔快递>"
+				flag = false
+			} else {
+				this.innerHTML = "顺丰快递>"
+				flag = true
+			}
+		})
+		var yy = document.getElementById('b');
+		var falg = false;
+		yy.addEventListener('click', function() {
+			if (falg) {
+				
+				this.innerHTML = "微信>"
+				falg = false
+			} else {
+				this.innerHTML = "支付宝>"
+				falg = true
+			}
+		})
+	</script>
+</html>

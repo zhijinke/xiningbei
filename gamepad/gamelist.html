@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏列表</title>
+		<script src="./js/gamelist.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/gamelist.css" />
+		<link rel="stylesheet" href="./css/rocket.css">
+		<script src="./js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+		<!-- 游戏 -------------------------------->
+		<div class="container">
+			<div class="row">
+				<!-- 游戏列表 -------------------------------->
+				<div class="col-md-9">
+					<div class="gamelist">
+						<!-- 游戏列表 -------------------------------->
+						<div class="search">游戏列表</div>
+						<hr>
+						<div class="result">
+							<div class="res">状态：已发售、预约中</div>
+							<div class="res">语言：日语</div>
+						</div>
+						<!-- 游戏项目 -------------------------------->
+						<?php foreach($gamelist as $k):?>
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+								<div class="pic">
+									<a href="#"><img src="<?=$k['imgsrc']?>" class="img-responsive"></a>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+								<div class="name">
+									<?=$k['name']?>
+								</div>
+								<div class="label">
+									<span><?=$k['sale']?></span>
+									<span><?=$k['language']?></span>
+									<!--<span>NEW</span>-->
+								</div>
+								<div class="sale">
+									2022年11月25日 发售予定
+								</div>
+								<div class="note">
+									<?=$k['introduce']?>
+								</div>
+								<div class="row link">
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<a href="game.html">
+											游戏详情
+											<i class="fa"></i>
+										</a>
+									</div>
+									<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+										<a href="ShoppingCart.html">
+											购买
+											<i class="fa"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<?php endforeach;?>
+					</div>
+				</div>
+				<!-- 筛选器 -------------------------------->
+				<div class="col-md-3">
+					<div class="filter">
+						<dl>
+							<dt>状态：</dt>
+							<dd>预约中</dd>
+							<dd>已发售</dd>
+
+						</dl>
+						<dl>
+							<dt>价格：</dt>
+							<dd>50~150</dd>
+							<dd>150~300</dd>
+						</dl>
+						<dl>
+							<dt>语言：</dt>
+							<dd>中文</dd>
+							<dd>日语</dd>
+							<dd>英语</dd>
+						</dl>
+						<dl class="select">
+							<dt>已选条件：</dt>
+						</dl>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 版权信息 -------------------------------->
+		<footer>
+					<div class="footcontainer">
+						<div class="list1 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+								<li><a href="#">联系客服</a></li>
+								<li><a href="#">廉政举报</a></li>
+								<li><a href="#">规则意见征集</a></li>
+								<li><a href="#">商务合作</a></li>
+							</ul>
+						</div>
+						<div class="list2 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+								<li><a href="#">付款方式</a></li>
+								<li><a href="#">关于退款</a></li>
+								<li><a href="#">购买指南</a></li>
+								<li><a href="#">帮助中心</a></li>
+							</ul>
+						</div>
+						<div class="list3 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+								<li><a href="#">服务协议</a></li>
+								<li><a href="#">隐私协议</a></li>
+								<li><a href="#">知识产权</a></li>
+							</ul>
+						</div>
+						<div class="list4 list">
+							<ul>
+								<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+								<li><a href="#">微信公众号</a></li>
+								<li><img src="./images/QRcode.png" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footfooter">
+						<span>&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1</span>
+					</div>
+				</footer>
+				<!-- 回到顶部 -->
+				<i class="iconfont icon-Top rocket"></i>
+		<script src="./js/gamelist.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/rocket.js"></script>
+	</body>
+</html>

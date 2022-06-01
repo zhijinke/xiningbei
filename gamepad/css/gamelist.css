@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #FCFCFC;
+}
+
+div {
+	display: block;
+}
+
+dl,
+dd {
+	margin: 0;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	outline: none;
+	color: #000;
+}
+
+hr {
+	border: none;
+	border-bottom: 2px dashed #C0A16B;
+}
+
+/* -- 游戏列表 -------------------------------- */
+.gamelist {
+	width: 100 auto;
+	margin: 55px auto;
+
+}
+
+/* -- 搜索 -------------------------------- */
+.search {
+	border-bottom-width: ;
+	font-size: 18px;
+	color: #fc9096;
+	font-weight: bold;
+	line-height: 24px;
+	border-left-style: solid;
+	border-left-width: 7px;
+	border-left-color: #fc9096;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.result {
+	background-color: #f9f6eb;
+	border-left-width: 7px;
+	border-left-style: solid;
+	border-left-color: #ffd05f;
+	padding-left: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #714f2f;
+	margin-bottom: 6px;
+}
+
+.res {
+	font-size: 14px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+/* -- 游戏 -------------------------------- */
+.gamelist .row {
+	padding-top: 15px;
+}
+
+.pic {
+	display: table-cell;
+	height: 170px;
+	margin-bottom: 6px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.name {
+	padding-bottom: 5px;
+	font-size: 2rem;
+	font-weight: bold;
+	border-bottom: solid 1px #545454;
+	background-color: #f9f6eb;
+	padding-top: 5px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #714f2f;
+	margin-bottom: 5px;
+	padding-left: 12px;
+}
+
+.label {
+	margin: 0;
+	padding-left: 6px;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+}
+
+.label span:first-child {
+	display: inline-block;
+	padding: 2px 15px;
+	margin-top: 5px;
+	background: skyblue;
+	color: #f5f5f5;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.label span {
+	display: inline-block;
+	padding: 2px 15px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background: #ff9613;
+	color: #f5f5f5;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.label span:last-child {
+	display: inline-block;
+	padding: 2px 15px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background: yellowgreen;
+	color: #f5f5f5;
+	font-size: 14px;
+	border-radius: 3px;
+}
+
+.sale {
+	padding: 5px 0;
+}
+
+.note {
+	padding-bottom: 10px;
+}
+
+.row .link > div {
+	padding: 5px 10px;
+}
+
+.link a {
+	position: relative;
+	display: block;
+	line-height: 40px;
+	border: solid 1px #545454;
+	color: #545454;
+	text-align: center;
+	transition: .4s;
+}
+
+.link a:hover {
+	background-color: gray;
+	border-color: gray;
+	color: #fafafa !important;
+}
+
+.link a i {
+	position: absolute;
+	right: 20px;
+	line-height: 40px;
+}
+
+/* fallback */
+@font-face {
+	font-family: 'Material Symbols Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url(../font.woff2) format('woff2');
+}
+
+.fa {
+	font-family: 'Material Symbols Outlined';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+}
+
+.link div:first-child .fa:before {
+    content: "\e5cc";
+}
+.link div:last-child .fa:before {
+	content: "\e8cc";
+}
+/* -- 筛选器 -------------------------------- */
+.filter {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 10px rgba(73, 66, 66, .1);
+	margin: 50px auto;
+	border: 1px solid #E5E5E5;
+}
+
+.filter dl {
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px dashed #dadada;
+	margin: 10px 20px 0 20px;
+}
+
+.filter dt {
+	float: left;
+	color: #8a8a8a;
+}
+
+.filter dd {
+	float: left;
+	color: #252525;
+	margin: 0 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.filter dd.active {
+	color: #c4284d;
+	font-weight: bold;
+}
+
+.filter dl.select {
+	background: #efefef;
+	margin: 0;
+	padding: 10px 20px 0 20px;
+	height: 80px;
+}
+
+.filter dl.select dd {
+	border: 1px solid #c4284d;
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 13px;
+	padding: 0 2px 0 10px;
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+.filter dl.select dd span {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	background: #c4284d;
+	color: #fff;
+	margin-left: 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.css">
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap3.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<link rel="stylesheet" href="./css/rocket.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/swiper-bundle.js"></script>
+		<title>首页</title>
+	</head>
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+		<!-- 轮播图 ------------------------------>
+		<div class="carouselcontainer">
+					<div class="swiper mySwiper2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/01.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/02.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/03.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/04.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/05.jpg"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="images/06.jpg"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="images/07.jpg"/>
+							</div>
+						</div>
+		
+					</div>
+					<div thumbsSlider="" class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="images/001.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/02.png" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/003.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/004.jpg" />
+							</div>
+							<div class="swiper-slide">
+								<img src="images/005.jpg"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="images/006.jpg"/>
+							</div>
+							<div class="swiper-slide">
+								<img src="images/007.jpg"/>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!-- 预约榜和畅销榜 -->
+		<div class="gamelistcontainer">
+			<!-- 预约榜 -->
+			<div class="subscribe">
+				<div class="titlecontainer">
+					<span><b>预约榜</b></span>
+					<div>
+						<a href="gamelist.php">查看更多</a>
+					</div>
+				</div>
+				<?php foreach($subscribe as $k):?>
+				<div class="subscribelist">
+					<div class="subscribeitem">
+						<div class="imgleft">
+							<a href="gamelist.php">
+							<img src="<?=$k['imgsrc']?>">
+							</a>
+						</div>
+						<div class="textright">
+							<span><a href="gamelist.php"><?=$k['name']?></a></span>
+							<span><a href="gamelist.php">价格：<?=$k['language']?></a></span>
+						</div>
+					</div>
+				</div>
+				<?php endforeach;?>
+			</div>
+			<!-- 线 -->
+			<div class="liner"></div>
+			<!-- 畅销榜 -->
+			<div class="boom">
+				<div class="titlecontainer">
+					<span><b>畅销榜</b></span>
+					<div>
+						<a href="gamelist.php">查看更多</a>
+					</div>
+				</div>
+				<?php foreach($boom as $k):?>
+				<div class="boomlist">
+					<div class="boomitem">
+						<div class="imgleft">
+							<a href="gamelist.php">
+							<img src="<?=$k['imgsrc']?>">
+							</a>
+						</div>
+						<div class="textright">
+							<span><a href="gamelist.php"><?=$k['name']?></a></span>
+							<span><a href="gamelist.php">支持语言：<?=$k['language']?></a></span>
+						</div>
+					</div>
+				</div>
+				<?php endforeach;?>
+				
+			</div>
+		</div>
+		<!-- 新闻列表和图片缩略图 -->
+		<div class="newscontainer">
+			<!-- 新闻列表 -->
+			<div class="news">
+				<div class="newsdetail">
+					<div class="newsdetailtitle">
+						<span>新闻板块</span>
+						<span><a href="newslist.php">更多</a></span>
+					</div>
+					<div class="newstemcontainer">
+						<?php foreach($newslist as $k):?>
+						<div class="newstem">
+							<div class="img">
+								<a href="newsList.php">
+								<img src="<?=$k['imgsrc']?>">
+								</a>
+							</div>
+							<div class="newstitle">
+								<span><a href="newsList.php"><?=$k['title']?></a></span>
+								<div class="newstext">
+									<a href="newsList.php">
+									<?=$k['con']?>
+										</a>
+								</div>
+							</div>
+						</div>
+						<?php endforeach;?>
+					</div>
+				</div>
+			</div>
+			<!-- 缩略图 -->
+			<div class="thumb">
+				<div class="colstitle">
+					<span>游戏板块</span>
+					<span><a href="gamelist.php">更多</a></span>
+				</div>
+				<div class="cols">
+					<?php foreach($games as $k):?>
+					<div class="col" ontouchstart="this.classList.toggle('houver');">
+						<div class="colcontainer">
+							<div class="front" style="background-image:url(<?=$k['imgsrc']?>);">
+								<div class="inner">
+									<p><?=$k['name']?></p>
+									<span><?=$k['introduce']?></span>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										<a href="game.html">查看详情</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php endforeach;?>
+				</div>
+			</div>
+		</div>
+		<!-- 版权信息 -------------------------------->
+		<footer>
+			<div class="footcontainer">
+				<div class="list1 list">
+					<ul>
+						<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+						<li><a href="#">联系客服</a></li>
+						<li><a href="#">廉政举报</a></li>
+						<li><a href="#">规则意见征集</a></li>
+						<li><a href="#">商务合作</a></li>
+					</ul>
+				</div>
+				<div class="list2 list">
+					<ul>
+						<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+						<li><a href="#">付款方式</a></li>
+						<li><a href="#">关于退款</a></li>
+						<li><a href="#">购买指南</a></li>
+						<li><a href="#">帮助中心</a></li>
+					</ul>
+				</div>
+				<div class="list3 list">
+					<ul>
+						<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+						<li><a href="#">服务协议</a></li>
+						<li><a href="#">隐私协议</a></li>
+						<li><a href="#">知识产权</a></li>
+					</ul>
+				</div>
+				<div class="list4 list">
+					<ul>
+						<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+						<li><a href="#">微信公众号</a></li>
+						<li><img src="./images/QRcode.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footfooter">
+				<span>&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1</span>
+			</div>
+		</footer>
+		<!-- 回到顶部 -->
+		<i class="iconfont icon-Top rocket"></i>
+	</body>
+
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/rocket.js"></script>
+
+</html>

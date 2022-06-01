@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	</head>
+
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+		<div class="loginbg bg">
+			<img src="images/makura_btn.png">
+			<form action="./login.php" method="post">
+				<div class="inputgroup">
+					<div class="inputphone">
+						<label for="demo">手机:</label>
+						<input type="text" name="user" class="form-control" placeholder="请输入手机号" id="demo" style="display: inline-block;">
+					</div>
+					<div class="inputpsw">
+						<label for="psw">密码:</label>
+						<input type="password" name="password" class="form-control" placeholder="请输入密码" id="demo_input" style="display: inline-block;">
+						<label><img id="demo_img" onclick="hideShowPsw()" src="images/lock.png" style="display: inline;"></label>
+					</div>
+				</div>
+				<div class="logintext ">
+					<input type="checkbox"> 七天之内自动登录
+				</div>
+				<span style="color: red;"><?=$msg?></span>
+				<div class="btngroup">
+					<button type="submit" class="btn btn-primary">立即登录</button>
+					<a href="./register.html"><button type="button" class="btn btn-outline-primary">注册新用户</button></a>
+				</div>
+			</form>
+		</div>
+		<div class="foot">
+			&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1
+		</div>
+		</div>
+		<script type="text/javascript">
+			// 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制
+			var demoImg = document.getElementById("demo_img");
+			var demoInput = document.getElementById("demo_input");
+			//隐藏text block，显示password block
+			function hideShowPsw() {
+				if(demoInput.type == "password") {
+					demoInput.type = "text";
+					demo_img.src = "images/lock-open.png";
+				} else {
+					demoInput.type = "password";
+					demo_img.src = "images/lock.png";
+				}
+			}
+		</script>
+	</body>
+
+</html>

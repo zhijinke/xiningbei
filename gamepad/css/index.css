@@ -1,0 +1,521 @@
+ /* 轮播图 ------------------------------------------*/
+ html,body {
+        background-color: #eaeaea !important;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+	  
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+		
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      .mySwiper2 .swiper-wrapper{
+        width: 1101px;
+        height: 500px;
+      }
+
+      .mySwiper2 .swiper-wrapper .swiper-slide img {
+        display: block;
+        /* width: 1101px; */
+		width: 90%;
+		height: 100%;
+        /* height: 430px; */
+        object-fit: cover;
+        border-radius: 20px;
+      }
+
+      .swiper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .mySwiper2 {
+        width: 80%;
+        margin-bottom: 20px;
+      }
+
+      .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+        margin-bottom: 20px;
+      }
+
+      .mySwiper .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+
+      .mySwiper .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+
+.mySwiper .swiper-wrapper .swiper-slide img {
+        /* width: 250px; */
+		height: 110px;
+        border-radius: 20px;
+        border: solid 2px #fff;
+      }
+/* 预约榜和畅销榜------------------------------------- */
+/* 预约榜----------------- */
+.gamelistcontainer{
+	width: 80%;
+	margin: 0 auto;
+	border: 0px solid red !important;
+	display: flex;
+	margin-bottom: 20px;
+}
+.gamelistcontainer .subscribe{
+	border-right: 0px solid black !important;
+	float: left;
+	width: 50%;
+	margin-right: 10px;
+	/* border-right: 1px solid red; */
+}
+/* 线-------- */
+.gamelistcontainer .liner{
+	width: 3px;
+	/* height: 856px; */
+	background-color: black;
+	margin: 0 20px;
+	
+}
+.gamelistcontainer .subscribe .titlecontainer{
+	display: flex;
+	justify-content: space-between;
+	padding:0 10px;
+	line-height: 56px;
+}
+.gamelistcontainer .subscribe .titlecontainer span{
+	font-size: 24px;
+}
+.gamelistcontainer .subscribe .titlecontainer div{
+	border: 1px solid black;
+	text-align: center;
+	margin: 5px 0;
+	border-radius:5% ;
+	line-height: 33px;
+	width: 100px;
+	height: 35px;
+	margin: auto 0;
+}
+.gamelistcontainer .subscribe .titlecontainer div a{
+	color: black;
+}
+.gamelistcontainer .subscribe .titlecontainer div:hover{
+	background-color: black;
+}
+.gamelistcontainer .subscribe .titlecontainer div:hover a{
+	color: white !important;
+	background-color: black;
+}
+.subscribe .subscribelist{
+	width: 80%;
+	margin: 0 auto;
+}
+.subscribe .subscribelist .subscribeitem{
+	display: flex;
+	margin-bottom: 10px;
+}
+.subscribe .subscribelist .subscribeitem .imgleft a img{
+	width: 200px;
+	/* height: 100px; */
+	margin-right:50px ;
+}
+.subscribe .subscribelist .subscribeitem .textright{
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+	/* font-size: 18px; */
+}
+.subscribe .subscribelist .subscribeitem .textright span:first-child{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.subscribe .subscribelist .subscribeitem .textright span:last-child{
+	font-size: 15px;
+}
+.subscribe .subscribelist .subscribeitem .textright span a{
+	color: black;
+}
+.subscribe .subscribelist .subscribeitem .textright span a:hover{
+	color: #ffa500 !important;
+}
+.subscribe .subscribelist .subscribeitem .imgleft a img:hover{
+	display: block;
+	transform: translate3d(0,-5px,0);
+	box-shadow: 0 15px 30px rgb(0 0 0 / 50%);
+	transition: all .5s;
+}
+
+/* 畅销榜--------------------------------------- */
+.gamelistcontainer .boom{
+	/*border: 1px solid red;*/
+	float: right;
+	width: 50%;
+}
+.gamelistcontainer .boom .titlecontainer{
+	display: flex;
+	justify-content: space-between;
+	padding:0 10px;
+	line-height: 56px;
+}
+.gamelistcontainer .boom .titlecontainer span{
+	font-size: 24px;
+}
+.gamelistcontainer .boom .titlecontainer div{
+	border: 1px solid black;
+	text-align: center;
+	margin: 5px 0;
+	border-radius:5% ;
+	line-height: 33px;
+	width: 100px;
+	height: 35px;
+	margin: auto 0;
+}
+.gamelistcontainer .boom .titlecontainer div a{
+	color: black;
+}
+.gamelistcontainer .boom .titlecontainer div:hover{
+	background-color: black;
+}
+.gamelistcontainer .boom .titlecontainer div:hover a{
+	color: white !important;
+	background-color: black;
+}
+.boom .boomlist{
+	width: 80%;
+	margin: 0 auto;
+}
+.boom .boomlist .boomitem{
+	display: flex;
+	margin-bottom: 10px;
+}
+.boom .boomlist .boomitem .imgleft img{
+	width: 200px;
+	/* height: 150px; */
+	margin-right:50px ;
+}
+.boom .boomlist .boomitem .textright{
+	display: flex;
+	flex-direction: column;
+	margin: auto 0;
+	/* font-size: 25px; */
+}
+.boom .boomlist .boomitem .textright span:first-child{
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.boom .boomlist .boomitem .textright span:last-child{
+	font-size: 15px;
+}
+.boom .boomlist .boomitem .textright span a{
+	color: black;
+}
+.boom .boomlist .boomitem .textright span a:hover{
+	color: #ffa500 !important;
+}
+.boom .boomlist .boomitem .imgleft a img:hover{
+	display: block;
+	transform: translate3d(0,-5px,0);
+	box-shadow: 0 15px 30px rgb(0 0 0 / 50%);
+	transition: all .5s;
+}
+/* 新闻列表和图片缩略图 ----------------------------------*/
+.newscontainer{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	margin-bottom: 20px;
+}
+.newscontainer .news{
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+  /* text-align: center; */
+  border-left:4px solid orange ;
+  border-right:4px solid orange ;
+  border-bottom:4px solid orange ;
+}
+
+.newscontainer .news img{
+	/* width: 150px; */
+	height: 150px;
+  margin-right: 10px;
+  transition: all .5s;
+}
+.newscontainer .news .img img:hover{
+  transform: scale(0.9);
+}
+.newscontainer .news .newstitle span{
+	font-size: 20px;
+	margin-bottom: 5px;
+	display: block;
+}
+.newscontainer .news .newstitle span a{
+	color: black;
+}
+.newscontainer .news .newstitle span a:hover{
+	color: #ffa500 !important;
+}
+.newscontainer .news .newstitle .newstext{
+	-webkit-line-clamp:3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    Overflow:hidden;
+}
+.newscontainer .news .newstitle .newstext a{
+	color: black;
+}
+.newscontainer .news .newstitle .newstext a:hover{
+	color: orange !important;
+}
+.newscontainer .news .newsdetail{
+  margin: 0 auto;
+}
+.newscontainer .news .newsdetail .newsdetailtitle{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: orange;
+  padding: 5px 20px;
+}
+.newscontainer .news .newsdetail .newsdetailtitle span a{
+	color: black;
+}
+.newscontainer .news .newsdetail .newsdetailtitle span a:hover{
+	color: white !important;
+}
+.newscontainer .news .newsdetail .newstemcontainer{
+  height: calc(100% - 28.563px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.newscontainer .news .newsdetail .newstem{
+	display: flex;
+  padding: 10px;
+}
+
+/* 缩略图 -----------------------------------*/
+.newscontainer .thumb{
+  margin-left: 20px;
+	width: 30%;
+	text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-left:4px solid orange ;
+  border-right:4px solid orange ;
+  border-bottom:4px solid orange ;
+}
+.thumb .colstitle{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: orange;
+  padding: 5px 20px;
+
+}
+.thumb .colstitle span a{
+	color: black;
+}
+.thumb .colstitle span a:hover{
+	color: white !important;
+}
+.thumb  .cols .col{
+  padding: 15px;
+}
+.thumb  .cols{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+  height: calc(100% - 28.56px);
+}
+
+.colcontainer {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: center;
+  min-height: 200px;
+  height: auto;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.back {
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+  background: linear-gradient(45deg, #cedce7 0%, #596a72 100%);
+}
+
+.front:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: '';
+  display: block;
+  opacity: .6;
+  background-color: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.back .inner p a{
+	color: black;
+}
+.back .inner p a:hover{
+	color: orange !important;
+}
+
+.inner {
+  -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+  transform: translateY(-50%) translateZ(60px) scale(0.94);
+  top: 50%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 1px solid transparent;
+  -webkit-perspective: inherit;
+  perspective: inherit;
+  z-index: 2;
+}
+
+.inner span{
+	-webkit-line-clamp:5;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	Overflow:hidden;
+	font-size: 15px;
+	color: black;
+	z-index: 999;
+}
+
+.colcontainer .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.colcontainer:hover .back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.colcontainer:hover .front {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.front .inner p {
+  font-size: 18px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after {
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem) {
+  .col {
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem) {
+  .col {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem) {
+  .col {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+.thumb .wrapper .cols .col .colcontainer{
+  width: 344px;
+}

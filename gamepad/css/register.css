@@ -1,0 +1,79 @@
+	
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+background-color: #E2E3E5;
+}
+
+
+.registerbg{
+	width: 40%;
+	height: 39em;
+	background-color: white;
+	position: relative;
+	border-radius: 1%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.5);
+	margin: 4% auto 5%;
+	padding: 1% 5% 1% ;
+}
+.bg>img{
+	width: 40%;
+	height: 10%;
+	margin: 1% auto;
+	display: block;
+}
+
+.inputcode label{
+	display: block;
+}
+.inputcode input{
+	width: 60%;
+	display: inline;
+}
+.inputcode button{
+	display: inline;
+	width: 35%;
+	float: right;
+}
+.btngroup>*{
+	width: 45%;
+}
+.btngroup>a{
+	float: right;
+}
+.registertext{
+    width: 100%;
+    height: 10%;
+    color: #666;
+    font-size: 14px;
+}
+
+.registertext input {
+    width: 12px;
+    height: 12px;
+    border-radius: 0%;
+    border: 1px solid #999;
+}
+.inputgroup,.inputgroup>div,.registertext{
+	margin-bottom: 12px;
+}
+.registertext2{
+	margin-top: 10px;
+}
+.foot {
+	width: 100%;
+	height: 20px;
+	color: black;
+	font-size: 11px;
+	position: absolute;
+	text-align: center;
+	bottom: -6em;	
+}
+
+

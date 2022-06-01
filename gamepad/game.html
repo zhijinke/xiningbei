@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>游戏详情</title>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap3.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/public.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.css" />
+		<link rel="stylesheet" type="text/css" href="./css/game.css" />
+		<link rel="stylesheet" href="./css/iconfont.css">
+		<link rel="stylesheet" href="./css/rocket.css">
+		<script src="js/swiper-bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jquery.min.js"></script>
+	</head>
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+		<!-- 游戏轮播图 -------------------------------->
+		<div id="top_bg">
+			<div class="container">
+				<!-- 轮播+图文 -------------------------------->
+				<div class="row">
+					<!-- 轮播图 ------------------------------>
+					<div class="col-xs-12 col-md-8">
+						<div class="carouselcontainer">
+							<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+								class="swiper mySwiper2">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="images/1.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/5.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/6.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/8.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/10.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/23.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/13-2.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/4.jpg" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="images/1.png" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/5.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/6.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/8.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/10.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/23.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/13-2.jpg" />
+									</div>
+									<div class="swiper-slide">
+										<img src="images/4.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 图文 ------------------------------>
+					<div class="col-xs-12 col-md-4">
+						<div>
+							<img src="images/t.png" class="img-responsive">
+						</div>
+						<div class="price text-center">
+							<div class="name">
+								<span>樱之刻-在樱花之森下漫步-</<span>
+							</div>
+							<div>
+								<span class="t-price">价格:</span>
+								<span class="y-price">￥200</span>
+							</div>
+						</div>
+
+						<div>
+							<ul>
+								<li>玩家评价：</li>
+								<li>发行日期：2022/11/25 00:00 ～</li>
+								<li>开发商：枕</li>
+								<li>原画：狗神煌 籠目 基4</li>
+								<li>剧本：SCA自</li>
+
+							</ul>
+						</div>
+						<div id="tag">
+							标签：
+							<a href="#">日语</a>
+							<a href="#">恋爱</a>
+							<a href="#">校园</a>
+						</div>
+					</div>
+				</div>
+				<!-- 简介+购买 ------------------------------>
+				<div class="row">
+					<div class="col-xs-12 col-md-8">
+						<div id="brief">
+							天才与才子与凡人。弱小的神与强大的神。<br>
+							比幸福前方更遥远故事。<br>
+							那便是，樱之物语的第二幕。<br>
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div id="buy">
+							<button type="button">
+								<i class="fa"></i>
+								加入购物车
+							</button>
+						</div>
+						<div id="with">
+							<button type="button">
+								<i class="fa"></i>
+								加入愿望单
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="character_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- 角色介绍 -->
+						<div class="guide">
+							角色介绍
+						</div>
+						<div class="chrs">
+							<div class="chr">
+								<img src="images/cha001.jpg">
+								<div class="note">
+									<p>
+										<span>草薙 直哉</span>
+									</p>
+									<p>《樱之刻》的主角</p>
+									<p>从夕张学园毕业后，他就读于国立艺术大学，并在夕张学园担任兼职讲师。</p>
+									<p>在实习工作后，他成为一名正式员工，一名美术老师。</p>
+									<p>与学生一起重振著名的夕张学园美术部。</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha002.jpg">
+								<div class="note">
+									<p>
+										<span>夏目 圭</span>
+										&emsp;CV：藤神司朗
+									</p>
+									<p>
+										在经历了动荡的生活后,<br>
+										他进入了夏目家。<br>
+										因为夏目蓝改变了原本的性格。
+									</p>
+									<p>
+										已经放下画笔的直哉依然是他追逐的目标。<br>
+										他仍然相信草薙直哉是一名天才。
+									</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha003.jpg">
+								<div class="note">
+									<p>
+										<span>夏目 蓝</span>
+										&emsp;CV：福圆美里
+									</p>
+									<p>作为夏目家的长女，她不仅是圭的姐姐，对直哉来说同样也是姐姐</p>
+									<p>
+										草薙一族与中村一族的斗争，<br>
+										中村一族与鸟谷纱希的斗争，<br>
+										她都是目击者，知道着一切。
+									</p>
+									<p>是被许多人拯救的一生，因此一生想要拯救更多人。</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha004.jpg">
+								<div class="note">
+									<p>
+										<span>本间 心铃</span>
+										&emsp;CV：藤田茜
+									</p>
+									<p>本间礼次郎与中村丽华的女儿。</p>
+									<p>
+										有着丽华一样的外表，<br>
+										也有着礼次郎一样恐怖的眼睛，被鸟谷纱希评价为“可怕的小姑娘”。
+									</p>
+									<p>
+										不过，她实际上很体贴，也很有礼貌，并没有危险的感觉。<br>
+										这也使得纱希感到困惑。
+									</p>
+									<p>被冠于“有气度”的称呼</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha005.jpg">
+								<div class="note">
+									<p>
+										<span>鸟谷 静流</span>
+										&emsp;CV：立石惠
+									</p>
+									<p>奇美拉的店长</p>
+									<p>她到处周游世界，曾经是店里咖啡进口的顾问，</p>
+									<p>回到日本后担任奇美拉的店长。</p>
+									<p>飘飘然的性格，让人没法琢磨。</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha006.jpg">
+								<div class="note">
+									<p>
+										<span>中村 丽华</span>
+										&emsp;CV：绫音まに
+									</p>
+									<p>
+										夕张学园的支配者<br>
+										中村章一的妹妹。
+									</p>
+									<p>在学风改革之前，一度有很多敌人，但也有支持她的人</p>
+									<p>因为鸟谷纱希的政变和与本间家的政治联姻，她的心逐渐扭曲。</p>
+									<p>因为静流的原因，她对《雪景鹊图花瓶》有着异常的执着。</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha007.jpg">
+								<div class="note">
+									<p>
+										<span>鸟谷 真琴</span>
+										&emsp;CV：小野凉子
+									</p>
+									<p>艺术杂志的编辑。</p>
+									<p>在《樱花的足迹》特辑中，被提升为主编。</p>
+									<p>在察觉到弓张市发生了什么后，持续在弓张取材。</p>
+									<p>还没有经验。</p>
+								</div>
+							</div>
+							<div class="chr">
+								<img src="images/cha008.jpg">
+								<div class="note">
+									<p>
+										<span>鸟谷 纱希</span>
+										"&emsp;CV：樱川未央
+									</p>
+									<p>通过在夕张学园的政变，成功将中村家驱逐出了学院。</p>
+									<p>
+										此外，她通过各种计划控制夕张学园，<br>
+										但她的地位在多方制衡下并不算稳定。
+									</p>
+									<p>
+										尽管如此，因为手腕干脆利落<br>
+										她依然被人畏惧着。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="system_bg">
+			<div class="container">
+				<div class="col-xs-12">
+					<div class="guide">
+						系统要求
+					</div>
+					<div class="sys_tabs">
+						<div class="sys_tab active">Windows</div>
+						<div class="sys_tab">Mac</daciv>
+						</div>
+						<div class="sys_content">
+							<div class="sys_game">
+								<div class="sysgame_L">
+									<ul>
+										<strong>最低配置：</strong>
+										<ul>
+											<li>需要 64 位处理器和操作系统</li>
+											<li>
+												<strong>操作系统：</strong>
+												Windows 7, 8 or 10 (64-bit)
+											</li>
+											<li>
+												<strong>处理器：</strong>
+												Pentium Gold 4415Y
+											</li>
+											<li>
+												<strong>内存：</strong>
+												2GB
+											</li>
+											<li>
+												<strong>显卡：</strong>
+												NVIDIA GeForce 8000 or AMD Radeon HD 2000
+											</li>
+										</ul>
+									</ul>
+								</div>
+								<div class="sysgame_R">
+									<ul>
+										<strong>推荐配置：</strong>
+										<ul>
+											<li>需要 64 位处理器和操作系统</li>
+											<li>
+												<strong>操作系统：</strong>
+												Windows 7, 8 or 10 (64-bit)
+											</li>
+											<li>
+												<strong>处理器：</strong>
+												Intel i5-2300 or AMD FX-6300
+											</li>
+											<li>
+												<strong>内存：</strong>
+												8GB
+											</li>
+											<li>
+												<strong>显卡：</strong>
+												NVIDIA GeForce GTX 560 or AMD Radeon HD 7850, 2 GB VRAM
+											</li>
+										</ul>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 固定跟随按钮 -->
+		<!-- <div class="fiexd_btn">
+			
+		</div> -->
+		<!-- 版权信息 -------------------------------->
+		<footer>
+					<div class="footcontainer">
+						<div class="list1 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+								<li><a href="#">联系客服</a></li>
+								<li><a href="#">廉政举报</a></li>
+								<li><a href="#">规则意见征集</a></li>
+								<li><a href="#">商务合作</a></li>
+							</ul>
+						</div>
+						<div class="list2 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+								<li><a href="#">付款方式</a></li>
+								<li><a href="#">关于退款</a></li>
+								<li><a href="#">购买指南</a></li>
+								<li><a href="#">帮助中心</a></li>
+							</ul>
+						</div>
+						<div class="list3 list">
+							<ul>
+								<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+								<li><a href="#">服务协议</a></li>
+								<li><a href="#">隐私协议</a></li>
+								<li><a href="#">知识产权</a></li>
+							</ul>
+						</div>
+						<div class="list4 list">
+							<ul>
+								<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+								<li><a href="#">微信公众号</a></li>
+								<li><img src="./images/QRcode.png" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footfooter">
+						<span>&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1</span>
+					</div>
+				</footer>
+				<!-- 回到顶部 -->
+				<i class="iconfont icon-Top rocket"></i>
+	</body>
+	<script src="js/game.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/rocket.js"></script>
+</html>

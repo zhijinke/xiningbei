@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css" />
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	</head>
+	<body>
+		<!-- 导航条 -------------------------------------------->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<img class="navbar-left img" src="./images/logo.png" alt="">
+				<a href="index.php" class="navbar-text navbar-left">首页</a>
+				<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+				<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+				<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+				<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+				<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+				<div class="user">
+					<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+					<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="registerbg bg">
+			<img src="images/makura_btn.png">
+			<form action="./register.php" method="post">
+				<div class="inputgroup">
+					<div class="inputphone">
+						<label for="demo">手机号:</label>
+						<input type="text" class="form-control" placeholder="请输入手机号" id="demo" name="phone">
+					</div>
+					<div class="inputuse">
+						<label for="use">用户名:</label>
+						<input type="text" class="form-control" placeholder="请输入用户名" id="use" name="user">
+					</div>
+					<div class="inputpsw ">
+						<label for="psw">密码:</label>
+						<input type="password" class="form-control" placeholder="请输入密码" id="demo_input" name="psw">
+					</div>
+					<div class="inputpsws">
+						<label for="psws">确认密码:</label>
+						<input type="password" class="form-control" placeholder="请确认密码" id="psws" name="psws">
+					</div>
+					<div class="inputcode">
+						<label for="code">短信验证码:</label>
+							<input type="text" class="form-control" placeholder="请输入短信验证码" id="code" name="code">
+							<button class="btn btn-primary" type="button">获取短信验证码</button>
+					</div>
+				</div>
+				<div class="registertext mb-1">
+					<input type="checkbox">
+					我已阅读并同意<span style="color: dodgerblue;">《用户协议》</span>
+				</div>
+				<span><?=$msg?></span>
+				<button class="form-control btn btn-primary mb-1" type="submit">提交注册</button>
+				<div class="registertext2 text-center ">
+					已有账号？<a href="./login.html">立即登录</a>
+				</div>
+			</form>
+		</div>
+		<div class="foot">
+			&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1
+		</div>
+		<script type="text/javascript">
+			// 这里使用最原始的js语法实现，可对应换成jquery语法进行逻辑控制
+			var demoImg = document.getElementById("demo_img");
+			var demoInput = document.getElementById("demo_input");
+			//隐藏text block，显示password block
+			function hideShowPsw() {
+				if (demoInput.type == "password") {
+					demoInput.type = "text";
+				} else {
+					demoInput.type = "password";
+					demo_img.src = "image/invisible.png";
+				}
+			}
+		</script>
+	</body>
+</html>

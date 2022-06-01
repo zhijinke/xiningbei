@@ -1,0 +1,96 @@
+ /* 导航条--------------------------------------- */
+ .navbar .container .img{
+   width: 50px;
+   line-height: 50px;
+   transition: all 0.5s;
+ }
+ .navbar .container .img:hover{
+   transform: scale(1.2);
+ }
+  a{
+   text-decoration: none !important;
+  }
+  a:hover{
+    color: black !important;
+  }
+  /* 版权信息----------------------------------------- */
+  footer{
+  	width: 100%;
+  	background-color:#2e2e38;
+  }
+  footer .footcontainer{
+  	display: flex;
+  	justify-content: space-around;
+	background-color: #F8F8F8;
+	border-top: 1px solid #F1F1F1;
+  }
+  footer .headtext,li{
+  	/* color: #e5e9f2; */
+  	list-style: none;
+  	margin-bottom: 15px;
+  }
+  footer .list1 .headtext{
+  	font-size: 20px;
+  /* 	margin-right: 5px; */
+  
+  }
+  
+  footer .headtext .iconfont{
+  	font-size: 18px;
+  	color: navy;
+  }
+  .footfooter{
+  	width: 100%;
+  	background-color:#1c2227 ;
+	
+  }
+  .footcontainer .list1, .list2, .list3, .list4{
+  	margin-top: 15px;
+  }
+  .footfooter>span{
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	line-height: 40px;
+	color: #5f6066;
+  }
+  /* 底部版权样式改变----------------------------------------- */
+ footer .footfooter{
+ 	width: 100%;
+ 	background-color:black;
+ }
+ footer .footcontainer{
+ 	display: flex;
+ 	justify-content: space-around;
+ 	width: 100%;
+ 	background-color:gray;
+ }
+ footer .footcontainer .list ul li:first-child{
+ 	font-size: 20px;
+ 	position: relative;
+ 	left: -40px;
+ }
+ footer .footcontainer .list ul li:first-child i{
+ 	font-size: 20px;
+ 	letter-spacing: 20px;
+ }
+ footer .footcontainer .list ul li{
+ 	margin: 20px 0;
+ }
+ footer .footcontainer .list ul li a{
+ 	color: black;
+ }
+ footer .footcontainer .list ul li a:hover{
+ 	color: white !important;
+ }
+ footer .footfooter span{
+ 		display: block;
+ 		color: white !important;
+ 		text-align: center;
+ 		line-height: 40px;
+ 		color: #5f6066;
+ }
+ footer .footcontainer .list4 li:last-child img{
+	 width: 100px;
+	 height:100px;
+ }

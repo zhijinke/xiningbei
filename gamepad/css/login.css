@@ -1,0 +1,65 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 100%;	
+	background-color: #E2E3E5;
+}
+.loginbg{
+	width: 40%;
+	height: 25em;
+	background-color: white;
+	border-radius: 1%;
+	position: relative;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 0 8px rgba(255, 255, 255, 0.5);
+	margin: 10% auto 12%;	
+	padding: 1% 5% 1% ;
+}
+
+.inputgroup,.inputgroup>div,.logintext{
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+.form-control{
+	width: 80%;
+}
+.bg>img{
+	width: 40%;
+	height: 10%;
+	margin: 2em auto;
+	display: block;
+}
+
+.logintext{
+    width: 100%;
+    height: 10%;
+    color: #666;
+    font-size: 14px;
+}
+
+.logintext input {
+    width: 12px;
+    height: 12px;
+    border-radius: 0%;
+    border: 1px solid #999;
+}
+.btngroup>*{
+	width: 45%;
+}
+.btngroup>a{
+	float: right;
+}
+.btngroup>a>button{
+	width: 100%;
+}
+.foot {
+	width: 100%;
+	height: 20px;
+	color: black;
+	font-size: 11px;
+	position: absolute;
+	text-align: center;
+	bottom: 0;	
+}
+

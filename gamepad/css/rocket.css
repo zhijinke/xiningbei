@@ -1,0 +1,11 @@
+/* 回到顶部--------------------------------------- */
+.rocket{
+  font-size: 70px !important;
+  position: fixed;
+  right: 50px;
+  bottom: 60px;
+  z-index: 9999;
+}
+.rocket:hover{
+	color: orange;
+}

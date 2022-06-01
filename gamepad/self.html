@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>self</title>
+		<link rel="stylesheet" type="text/css" href="css/self.css"/>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap3.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" href="./css/iconfont.css">
+		<link rel="stylesheet" href="./css/rocket.css">
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 导航条 -------------------------------------------->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container">
+					<img class="navbar-left img" src="./images/logo.png" alt="">
+					<a href="index.php" class="navbar-text navbar-left">首页</a>
+					<a href="gamelist.php" class="navbar-text navbar-left">商城</a>
+					<a href="newsList.php" class="navbar-text navbar-left">资讯</a>
+					<a href="ShoppingCart.html" class="navbar-text navbar-left">购物车</a>
+					<a href="self.html" class="navbar-text navbar-left">个人中心</a>
+					<a href="aboutUs.html" class="navbar-text navbar-left">关于我们</a>
+					<div class="user">
+						<a href="register.html" target="_blank" class="navbar-text navbar-right">注册</a>
+						<a href="login.html" target="_blank" class="navbar-text navbar-right">登录</a>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="big-box">
+				<div class="content ">
+					<div class="left">
+						<div @click="one" :class="{'active':oneshow}" >个人中心</div>
+						<div @click="two" :class="{'active':twoshow}">我拥有的游戏</div>
+						<div @click="three" :class="{'active':threeshow}">修改资料</div>
+						<div @click="four" :class="{'active':fourshow}">我的评价</div>
+						<div class="gobuy"><a href="game.html">游戏商城</a></div>
+					</div>
+					<div class="right">
+						<div v-show="oneshow" class="onebox">
+							<div>
+								<h1>账号信息</h1>
+								<div class="ml">
+									<h3>账号名称</h3>
+									<p>{{name}}</p>
+									<h3>账号ID</h3>
+									<p>{{id}}</p>
+									<!-- <h3>性别</h3>
+									<p>{{sex}}</p> -->
+									<h3>出生日期</h3>
+									<p>{{birthday}}</p>
+								</div>
+								<!-- <div class="myimg">
+									<img src="./image/1.jpg" >
+								</div> -->
+							</div>
+						</div>
+						<div v-show="twoshow" class="twobox" >
+							<div>
+								<div class="game-photo">
+									<img src="./images/suba10th_half.png" >
+								</div>
+								<div>
+									<p>素晴之日</p>
+									<p>游戏厂商: ケロQ </p>
+									<P>入库日期:2020-5-03</P>
+									<p>游戏时间:200小时</p>
+								</div>
+							</div>
+							<div>
+								<div class="game-photo">
+									<img src="./images/syzg.jpg" >
+								</div>
+								<div>
+									<p>沙耶之歌</p>
+									<p>游戏厂商:Nitro+</p>
+									<P>入库日期:2019-10-03</P>
+									<p>游戏时间:25小时</p>
+								</div>
+							</div>
+							<div>
+								<div class="game-photo">
+									<img src="./images/whj.jpg" >
+								</div>
+								<div>
+									<p>万花镜</p>
+									<p>游戏厂商:ωstar</p>
+									<P>入库日期:2021-4-13</P>
+									<p>游戏时间:666小时</p>
+								</div>
+							</div>
+
+						</div>
+						<div v-show="threeshow" class="threebox">
+							<div>
+								<h1>修改资料</h1>
+								<div class="ml">
+									<h3>用户名:</h3>
+									<input type="text" :placeholder="name" v-model="tname"/>
+									<h3>ID:</h3>
+									<p class="big-font">{{id}} &nbsp;&nbsp;&nbsp;&nbsp;不可修改!</p>
+									<div class="">
+										<span class="big-font">性别:</span><input type="radio"  id="male" value="男" v-model="tsex" class="curs big-font"/>
+										<label for='sex' class="big-font">男</label>
+										<input type="radio"  id="female" value="女"  v-model="tsex" class="curs big-font"/>
+										<label for='sex' class="big-font">女</label>
+									</div>
+									<div class="mt"><span class="big-font">出生日期:</span><input type="date" v-model="tdate"/></div>
+									<div class="mt">
+										<button type="button" @click="save" class="btn-primary">保存</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div v-show="fourshow" class="threebox big-font">
+							<div class="comment-box-father">
+								<div class="gameimg-box">
+									<img src="images/whj.jpg" >
+								</div>
+								<div class="comment-box">
+									<div>游戏名: {{gamename}}</div>
+									<div>评论时间:2022年-5月-2日</div>
+									<div>推荐度★★★★☆
+这个作品的BGM感觉就比《电波消逝之日》要差上一些，不管是OPED还是插曲，全部都没有给我留下特别深刻的印象，综上所述，BGM应该是扣分点。</div>
+								</div>
+								<div class="gameimg-box">
+									<img src="images/suba10th_half.png" >
+								</div>
+								<div class="comment-box">
+									<div>游戏名: {{gamename2}}</div>
+									<div>评论时间:2022年-3月-21日</div>
+									<div>推荐度★★★★★
+										制作精良，故事很感人，画质很好，看完结局发现纸已经用完了真是近年来最佳游戏</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- 版权信息 -------------------------------->
+			<footer>
+						<div class="footcontainer">
+							<div class="list1 list">
+								<ul>
+									<li><a href="#"><i class="iconfont icon-home"></i>关于我们</a></li>
+									<li><a href="#">联系客服</a></li>
+									<li><a href="#">廉政举报</a></li>
+									<li><a href="#">规则意见征集</a></li>
+									<li><a href="#">商务合作</a></li>
+								</ul>
+							</div>
+							<div class="list2 list">
+								<ul>
+									<li><a href="#"><i class="iconfont icon-thlarge"></i>帮助中心</a></li>
+									<li><a href="#">付款方式</a></li>
+									<li><a href="#">关于退款</a></li>
+									<li><a href="#">购买指南</a></li>
+									<li><a href="#">帮助中心</a></li>
+								</ul>
+							</div>
+							<div class="list3 list">
+								<ul>
+									<li><a href="#"><i class="iconfont icon-commenting"></i>法律信息</a></li>
+									<li><a href="#">服务协议</a></li>
+									<li><a href="#">隐私协议</a></li>
+									<li><a href="#">知识产权</a></li>
+								</ul>
+							</div>
+							<div class="list4 list">
+								<ul>
+									<li><a href="#"><a href="#"><i class="iconfont icon-weixin"></i>游戏商城</a></li>
+									<li><a href="#">微信公众号</a></li>
+									<li><img src="./images/QRcode.png" alt=""></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footfooter">
+							<span>&copy; 湖北三峡职业技术 20软件技术二班 鄂ICP 备 15013761 号 -1</span>
+						</div>
+					</footer>
+					<!-- 回到顶部 -->
+					<i class="iconfont icon-Top rocket"></i>
+			<!-- 回到顶部 -->
+				<i class="iconfont icon-Top rocket"></i>
+		</div>
+		<script src="js/self.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/rocket.js"></script>
+	</body>
+</html>

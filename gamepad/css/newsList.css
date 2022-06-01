@@ -1,0 +1,103 @@
+.navbar .container .img{
+   width: 50px;
+   line-height: 50px;
+   transition: all 0.5s;
+ }
+ .navbar .container span .img:hover{
+   transform: scale(0.5);
+ }
+ hr{
+ 	 border-color:gray;
+ 	 margin-top: 10px;
+ }
+ /*图片加文字*/
+.h4Cs{
+	font-weight:bold;
+	margin-bottom:20px;
+	/*color: gold;*/
+}
+.imgCs{
+	width:200px;
+	height:150px;
+}
+.media-time{
+	position: relative;
+	/*left:px;*/
+	bottom: 200px;
+}
+.media-body h4 a{
+	color: black;
+}
+.media-body h4 a:hover{
+	color: blue;
+	text-decoration: none;
+}
+.media .media-left img{
+	transition: all 1.0s;
+}
+
+.media .media-left img:hover{
+	transform: scale(0.5);
+}
+/*分页*/
+.pageCs{
+	/*display: table;*/
+	/*align-content: center;*/
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+.pageCs a{
+	display：inline-block
+}
+/*新闻排行*/
+.newsList{
+	padding-left: 20px;
+	margin-top: 20px;
+}
+.newsList li{
+	list-style-type: none;
+	/*padding-right: 20px;*/
+	/*padding-left: 10px;*/
+	
+}
+.newsList li a{
+	color: black;
+	font-size: 16px;
+	margin-bottom:10px;
+	margin-right: 10px;
+	
+}
+.newsList li a:hover{
+	color: blue;
+	text-decoration: none;
+}
+.newsList li .listTime{
+	position: relative;
+	/*margin-left:10px;*/
+	
+}
+/*轮播图片*/
+.newsTitle{
+	font-size: 10px;
+	color: #000000;
+	position: relative;
+}
+/*.carousel .carousel-indicators li {
+   width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  position: relative;
+  top: 20px;
+}
+.carousel-item .carousel-caption .newsTitle{
+	font-size: 16px;
+	position: relative;
+	right: 90px;
+	top:40px;
+}*/
+/*焦点新闻*/
+.list-group li{
+	list-style-type: none;
+}
+
+
