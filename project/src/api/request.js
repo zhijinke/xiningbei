@@ -16,6 +16,8 @@ let requests = axios.create({
     // 代表请求超时的时间5s
     timeout:5000
 });
+requests.defaults.baseURL = 'http://gmall-h5-api.atguigu.cn',
+
 // 请求拦截器，在发送请求之前，请求拦截器可以检测到，可以再请求发出去之前做一些事情
 requests.interceptors.request.use((config)=>{
     // config:配置对象，对象里面有一个属性很重要，headers请求头
